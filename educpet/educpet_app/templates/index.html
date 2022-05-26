@@ -1,0 +1,426 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+		<title>Educ'Pet</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="{% static 'educpet_app/css/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
+
+
+		<!-- Additional CSS Files -->
+		<link rel="stylesheet" href="{% static 'educpet_app/css/template/fontawesome.css' %}">
+		<link rel="stylesheet" href="{% static 'educpet_app/css/template/templatemo-eduwell-style.css' %}">
+		<link rel="stylesheet" href="{% static 'educpet_app/css/template/owl.css' %}/">
+		<link rel="stylesheet" href="{% static 'educpet_app/css/template/lightbox.css' %}">
+
+		{% block link %}
+		{% endblock %}
+
+	</head>
+
+<body>
+
+
+	<!-- ***** Header Area Start ***** -->
+	<header class="header-area header-sticky">
+			<div class="container">
+					<div class="row">
+							<div class="col-12">
+									<nav class="main-nav">
+											<!-- ***** Logo Start ***** -->
+											<a href="index.html" class="logo" style="max-width:70px">
+													<img src="{% static 'educpet_app/images/chiens/logo_white.png' %}" alt="Edu'Pet Logo">
+											</a>
+											<!-- ***** Logo End ***** -->
+											<!-- ***** Menu Start ***** -->
+											<ul class="nav">
+													<li class="scroll-to-section"><a href="#top" class="active">Accueil</a></li>
+													<li class="scroll-to-section"><a href="#services">Présentation</a></li>
+													<li class="has-sub">
+															<a href="javascript:void(0)">Services</a>
+															<ul class="sub-menu">
+																	<li><a href="#courses">1er RDV</a></li>
+																	<li><a href="#courses">Séances de travail</a></li>
+																	<li><a href="#courses">Balades éducatives</a></li>
+																	<li><a href="#courses">Conseils</a></li>
+															</ul>
+													</li>
+													<li class="scroll-to-section"><a href="#get-info">Qui sommes-nous ?</a></li> 
+													<li class="scroll-to-section"><a href="#testimonials">Avis</a></li> 
+													<li class="scroll-to-section"><a href="#contact-section">Prise de contact</a></li> 
+											</ul>        
+											<a class='menu-trigger'>
+													<span>Menu</span>
+											</a>
+											<!-- ***** Menu End ***** -->
+									</nav>
+							</div>
+					</div>
+			</div>
+	</header>
+	<!-- ***** Header Area End ***** -->
+
+	<!-- ***** Main Banner Area Start ***** -->
+	<section class="main-banner" id="top">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 align-self-center">
+					<div class="header-text">
+						<h2>Educatrice canine avec <em>méthodes positives</em></h2>
+						<div class="main-button-gradient">
+							<div class="scroll-to-section"><a href="#contact-section">Me contacter !</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="right-image">
+						<img src="{% static 'educpet_app/images/template/banner-right-image.png' %}" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ***** Main Banner Area End ***** -->
+
+	<section class="our-courses" id="courses">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 offset-lg-3">
+					<div class="section-heading">
+						<h4>Mes <em>services</em></h4>
+						<p>Les differents services que nous pouvons proposez à vous et à votre meilleur ami à poil</p>
+					</div>
+				</div>
+				<div class="col-lg-12">
+					<div class="naccs">
+						<div class="tabs">
+							<div class="row">
+								<div class="col-lg-3">
+									<div class="menu">
+										<div class="active gradient-border"><span>1er Rendez-vous</span></div>
+										<div class="gradient-border"><span>Séances de travail</span></div>
+										<div class="gradient-border"><span>Balades éducatives</span></div>
+										<div class="gradient-border"><span>Conseils</span></div>
+									</div>
+								</div>
+								<div class="col-lg-9">
+									<ul class="nacc">
+										<li id="1er-rdv" class="active">
+											<div>
+												<div class="left-image">
+													<img src="{% static 'educpet_app/images/chiens/1er_rdv.png' %}" alt="">
+													<div class="price"><h6>30€</h6></div>
+												</div>
+												<div class="right-content">
+													<h4>1er Rendez-vous</h4>
+													<p class="text-justify">
+														Le premier rdv se passe chez le client, il dure 1h et est au prix de 30€. 
+														<br><br>Pendant 30min nous discuterons des soucis rencontrés avec le chien, des méthodes misent en œuvres et voir pourquoi elles ont échoué. 
+														<br><br>Pendant les 20min restantes, nous feront une promenade pour que je puisse voir l’état mental du chien en dehors de chez lui ainsi que les réactions de son maître.
+													</p>
+													<span>30min Discussion</span>
+													<span>20min Promenade</span>
+													<span class="last-span">30€</span>
+													<div class="text-button">
+														<a href="contact-us.html">S'inscrire</a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li id="seance">
+											<div>
+												<div class="left-image">
+													<img src="{% static 'educpet_app/images/chiens/seances.png' %}" alt="">
+													<div class="price"><h6>40€</h6></div>
+												</div>
+												<div class="right-content">
+													<h4>Séance de travail</h4>
+													<p class="text-justify">Les séances de travail se déroulent soit chez le client, soit dans des lieux précis (parcs, forêt, ville, etc) selon les soucis rencontrés. Chaque séance dure 1h et est au prix de 40€/séance. 
+														<br><br>Pendant cette heure nous travaillerons avec le maître et le chien, la plupart du temps en extérieur (marche en laisse, marche au pied, réactivité humains ou congénères, rappel, croisements chiens, etc). 
+														<br><br>Entre chaque séance vous aurez des exercices à faire afin que l’apprentissage se fasse plus rapidement
+													</p>
+													<span>Travail Maître & Chien</span>
+													<span>Exercices</span>
+													<span class="last-span">40€/séance</span>
+													<div class="text-button">
+														<a href="contact-us.html">S'inscrire</a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li id="balades">
+											<div>
+												<div class="left-image">
+													<img src="{% static 'educpet_app/images/chiens/balades.png' %}" alt="">
+													<div class="price"><h6>20€</h6></div>
+												</div>
+												<div class="right-content">
+													<h4>Balades éducatives</h4>
+													<p class="text-justify">Les balades canines se font le samedi matin entre 11h et 13h (dans les champs ou en forêt). 
+														<br><br>Elles sont à 20€/balade et le nombre de chien est de minimum 2 et de maximum 4. 
+														<br><br>Il s’agit de balade d’éducation (rappel avec stimuli, réactivité congénères, chiens peureux, chiens harceleurs, etc)</p>
+													<span>Samedi 11h-13h</span>
+													<span>2-4 Chiens</span>
+													<span class="last-span">20€/balade</span>
+													<div class="text-button">
+														<a href="contact-us.html">S'inscrire</a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li id="conseils">
+											<div>
+												<div class="left-image">
+													<img src="{% static 'educpet_app/images/chiens/conseils.png' %}" alt="">
+													<div class="price"><h6>250€</h6></div>
+												</div>
+												<div class="right-content">
+													<h4>Conseils</h4>
+													<p class="text-justify">
+														Les conseils sont à 250€. Nous verrons votre lieu d’habitation et comment bien l’adapter à l’arrivée d’un chiot, le chien idéal selon votre mode de vie (nombre de balade, temps de balade, etc) et vos préférences de race (un chien sportif, un chien de chasse, un chien calme, etc). 
+														<br><br>Il s’agira aussi d’apprendre les bases telles que la propreté, la bonne socialisation (ville, humains, chiens, autres animaux, etc)</p>
+													<span>Préparation </span>
+													<span>Propreté & Sociabilisation</span>
+													<span class="last-span">250€</span>
+													<div class="text-button">
+														<a href="contact-us.html">S'inscrire</a>
+													</div>
+												</div>
+											</div>
+											</li>
+										</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="get-info">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="left-image">
+            <img class="img-rounded" src="{% static 'educpet_app/images/chiens/laura_prez.jpg' %}" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 align-self-center">
+          <div class="section-heading pt-0 mb-2">
+            <h4 class="mt-0">Qui <em>sommes-nous</em> ?</h4>						
+            <p class="mt-2 text-justify">Je m’appelle Laura, j’ai 23 ans et je me suis lancée il y a quelques mois pour être éducatrice canine à mon propre compte. J’ai toujours été passionnée par les chiens, j’en ai eu deux (un labrador croisé setter irlandais et une malinoise) et me suis occupée de leur éducation de A à Z.
+							<br><br>Il me tenait à cœur d’avoir un travail où il m’était possible d’emmener Freya, ma malinoise ! Elle m’est très utile pour les chiens peureux, les chiens réactifs, travailler les croisements chiens ainsi que le rappel avec stimuli.
+							<br><br>Le bien-être du chien ainsi que celui du maître sont une priorité pour moi, c’est pour cela que je suis contre les méthodes coercitives où le chien subit des douleurs et où la confiance entre le chien et son maître est totalement brisée.
+						</p>							
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+	<section class="testimonials" id="testimonials">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="section-heading">
+						<h6>Testimonials</h6>
+						<h4>What They <em>Think</em></h4>
+					</div>
+				</div>
+				<div class="col-lg-12">
+					<div class="owl-testimonials owl-carousel" style="position: relative; z-index: 5;">
+						<div class="item">
+							<p>“just think about TemplateMo if you need free CSS templates for your website”</p>
+								<h4>Catherine Walk</h4>
+								<span>CEO &amp; Founder</span>
+								<img src="{% static 'educpet_app/images/template/quote.png' %}" alt="">
+						</div>
+						<div class="item">
+							<p>“think about our website first when you need free HTML templates for your website”</p>
+								<h4>David Martin</h4>
+								<span>CTO of Tech Company</span>
+								<img src="{% static 'educpet_app/images/template/quote.png' %}" alt="">
+						</div>
+						<div class="item">
+							<p>“just think about our website wherever you need free templates for your website”</p>
+								<h4>Sophia Whity</h4>
+								<span>CEO and Co-Founder</span>
+								<img src="{% static 'educpet_app/images/template/quote.png' %}" alt="">
+						</div>
+						<div class="item">
+							<p>“Praesent accumsan condimentum arcu, id porttitor est semper nec. Nunc diam lorem.”</p>
+								<h4>Helen Shiny</h4>
+								<span>Tech Officer</span>
+								<img src="{% static 'educpet_app/images/template/quote.png' %}" alt="">
+						</div>
+						<div class="item">
+							<p>“Praesent accumsan condimentum arcu, id porttitor est semper nec. Nunc diam lorem.”</p>
+								<h4>George Soft</h4>
+								<span>Gadget Reviewer</span>
+								<img src="{% static 'educpet_app/images/template/quote.png' %}" alt="">
+						</div>
+						<div class="item">
+							<p>“Praesent accumsan condimentum arcu, id porttitor est semper nec. Nunc diam lorem.”</p>
+								<h4>Andrew Hall</h4>
+								<span>Marketing Manager</span>
+								<img src="{% static 'educpet_app/images/template/quote.png' %}" alt="">
+						</div>
+						<div class="item">
+							<p>“Praesent accumsan condimentum arcu, id porttitor est semper nec. Nunc diam lorem.”</p>
+								<h4>Maxi Power</h4>
+								<span>Fashion Designer</span>
+								<img src="{% static 'educpet_app/images/template/quote.png' %}" alt="">
+						</div>
+						<div class="item">
+							<p>“Praesent accumsan condimentum arcu, id porttitor est semper nec. Nunc diam lorem.”</p>
+								<h4>Olivia Too</h4>
+								<span>Creative Designer</span>
+								<img src="{% static 'educpet_app/images/template/quote.png' %}" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="contact-us" id="contact-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					<div id="map">					
+						<!-- You just need to go to Google Maps for your own map point, and copy the embed code from Share -> Embed a map section -->
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2641.6562332659887!2d2.6582692999999997!3d48.5398194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5fa63644f411b%3A0xaf1e1e19b428c3d1!2s15%20Pass.%20Louis%20Armstrong%2C%2077000%20Melun!5e0!3m2!1sfr!2sfr!4v1653578350785!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						<div class="row">
+							<div class="col-lg-4">
+								<div class="contact-info">
+									<div class="icon">
+										<i class="fa fa-at"></i>
+									</div>
+									<h4>Email</h4>
+									<span>educpet@gmail.com</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<form id="contact" action="" method="post">
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="section-heading">
+									<h4>Contactez <em>nous</em></h4>
+									<p>Vous avez besoin d'un renseignement ou souhaitez prendre contact pour un premier rendez-vous ?<br><br>
+										Vous pouvez me joindre via ce formulaire, via email ou téléphone.</p>
+								</div>
+							</div>
+							<div class="col-lg-12">
+								<fieldset>
+									<input type="name" name="name" id="name" placeholder="Nom complet" autocomplete="on" required>
+								</fieldset>
+							</div>
+							<div class="col-lg-12">
+								<fieldset>
+									<input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Votre email" required="">
+								</fieldset>
+							</div>
+							<div class="col-lg-12">
+								<fieldset>
+									<textarea name="message" id="message" placeholder="Votre message"></textarea>
+								</fieldset>
+							</div>
+							<div class="col-lg-12">
+								<fieldset>
+									<button type="submit" id="form-submit" class="main-gradient-button">Envoyer</button>
+								</fieldset>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-lg-12">
+					<ul class="social-icons">
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="#"><i class="fa fa-rss"></i></a></li>
+						<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+					</ul>
+				</div>
+				<div class="col-lg-12">
+					<p class="copyright">Copyright © 2022 EduWell Co., Ltd. All Rights Reserved. 
+					
+					<br>Design: <a rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Scripts -->
+	<!-- Bootstrap core JavaScript -->
+		<script src="{% static 'educpet_app/js/jquery/jquery.min.js' %}"></script>
+		<script src="{% static 'educpet_app/js/bootstrap/bootstrap.min.js' %}"></script>
+
+		<script src="{% static 'educpet_app/js/template/isotope.min.js' %}"></script>
+		<script src="{% static 'educpet_app/js/template/owl-carousel.js' %}"></script>
+		<script src="{% static 'educpet_app/js/template/lightbox.js' %}"></script>
+		<script src="{% static 'educpet_app/js/template/tabs.js' %}"></script>
+		<script src="{% static 'educpet_app/js/template/video.js' %}"></script>
+		<script src="{% static 'educpet_app/js/template/slick-slider.js' %}"></script>
+		<script src="{% static 'educpet_app/js/template/custom.js' %}"></script>
+		<script>
+				$('.nav li:first').addClass('active');
+
+				var showSection = function showSection(section, isAnimate) {
+					var
+					direction = section.replace(/#/, ''),
+					reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+					reqSectionPos = reqSection.offset().top - 0;
+
+					if (isAnimate) {
+						$('body, html').animate({
+							scrollTop: reqSectionPos },
+						800);
+					} else {
+						$('body, html').scrollTop(reqSectionPos);
+					}
+
+				};
+
+				var checkSection = function checkSection() {
+					$('.section').each(function () {
+						var
+						$this = $(this),
+						topEdge = $this.offset().top - 80,
+						bottomEdge = topEdge + $this.height(),
+						wScroll = $(window).scrollTop();
+						if (topEdge < wScroll && bottomEdge > wScroll) {
+							var
+							currentId = $this.data('section'),
+							reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+							reqLink.closest('li').addClass('active').
+							siblings().removeClass('active');
+						}
+					});
+				};
+
+				$('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+					e.preventDefault();
+					showSection($(this).attr('href'), true);
+				});
+
+				$(window).scroll(function () {
+					checkSection();
+				});
+		</script>
+</body>
+
+</html>
