@@ -189,7 +189,7 @@
 					$('.header-area .nav').slideUp(200);	
 				}				
 				$('html,body').animate({
-					scrollTop: (target.offset().top) - 80
+					scrollTop: (target.scrollTop()) - 80
 				}, 700);
 				return false;
 			}
@@ -213,7 +213,7 @@
 	        menu = target;
 	       	var target = $(this.hash);
 	        $('html, body').stop().animate({
-	            scrollTop: (target.offset().top) - 79
+	            scrollTop: (target.scrollTop()) - 79
 	        }, 500, 'swing', function () {
 	            window.location.hash = target;
 	            $(document).on("scroll", onScroll);
@@ -300,7 +300,7 @@
             $w = jQuery(window),
             viewTop = $w.scrollTop(),
             viewBottom = viewTop + $w.height(),
-            _top = $t.offset().top,
+            _top = $t.scrollTop(),
             _bottom = _top + $t.height(),
             compareTop = partial === true ? _bottom : _top,
             compareBottom = partial === true ? _top : _bottom;
