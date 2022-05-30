@@ -207,3 +207,12 @@ html.lb-disable-scrolling {
 .text-justify{
   text-align:justify;
 }
+
+.img-rounded{
+  border-radius: 5%;
+}
+
+.img-doggo{
+  width:100px!important;
+  border-radius:5%;
+}

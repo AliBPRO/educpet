@@ -34,6 +34,29 @@ font & reset css
 reset
 --------------------------------------------- 
 */
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #919191 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #919191;
+    border-radius: 9px;
+    border: 2px solid #ffffff;
+  }
+  
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
 s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
@@ -125,12 +148,12 @@ body {
 }
 
 ::selection {
-  background: #dc8cdb;
+  background: #d0aae1;
   color: #fff;
 }
 
 ::-moz-selection {
-  background: #dc8cdb;
+  background: #d0aae1;
   color: #fff;
 }
 
@@ -171,7 +194,7 @@ body {
 
 .white-button a {
   font-size: 13px;
-  color: #dc8cdb;
+  color: #d0aae1;
   background-color: #fff;
   padding: 12px 30px;
   display: inline-block;
@@ -188,7 +211,7 @@ body {
 .text-button a {
   font-size: 14px;
   font-weight: 500;
-  color: #dc8cdb;
+  color: #d0aae1;
   text-decoration: underline !important;
   transition: all .3s;
 }
@@ -232,7 +255,7 @@ section {
 
 .section-heading h4 em {
   font-style: normal;
-  color: #dc8cdb;
+  color: #d0aae1;
 }
 
 .section-heading p {
@@ -246,7 +269,6 @@ header
 --------------------------------------------- 
 */
 .background-header {
-  background: rgb(219,138,222) !important;
   background: linear-gradient(165deg, #2f4b52 0%, #ddc9e6 80%);
   height: 80px!important;
   position: fixed!important;
@@ -405,7 +427,7 @@ header
 
 .header-area .main-nav .nav li.has-sub ul li a:hover {
   background: #fff;
-  color: #dc8cdb!important;
+  color: #d0aae1!important;
   padding-left: 25px;
 }
 
@@ -545,7 +567,7 @@ header
 }
 
 .header-area.header-sticky .nav li a.active {
-  color: #dc8cdb;
+  color: #d0aae1;
 }
 
 @media (max-width: 1200px) {
@@ -564,7 +586,7 @@ header
   }
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
-    color: #dc8cdb!important;
+    color: #ddc9e6!important;
     opacity: 1;
   }
   .header-area.header-sticky .nav li.search-icon a {
@@ -622,7 +644,7 @@ header
   }
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
-    color: #dc8cdb!important;
+    color: #d0aae1!important;
   }
   .header-area .main-nav .nav li.has-sub ul.sub-menu {
     position: relative;
@@ -732,7 +754,7 @@ section.main-banner {
 
 .main-banner .header-text h2 em {
   font-style: normal;
-  color: #dc8cdb;
+  color: #d0aae1;
 }
 
 .main-banner .main-button-gradient {
@@ -788,7 +810,7 @@ services
 }
 
 .services .owl-dots .active {
-  background-color: #dc8cdb;
+  background-color: #d0aae1;
 }
 
 
@@ -848,7 +870,7 @@ section.our-courses .naccs .menu div {
 }
 
 section.our-courses .naccs .menu div.active {
-  color: #dc8cdb;
+  color: #d0aae1;
   border: 3px solid #2f4b52;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
 }
@@ -1057,15 +1079,17 @@ section.testimonials:after {
 .testimonials .item span {
   font-size: 13px;
   font-weight: 700;
-  color: #dc8cdb;
+  color: #d0aae1;
 }
 
 .testimonials .item img {
-  max-width: 44px;
+  width: 85px!important;
+  height: 85px!important;
   z-index: 2;
   position: absolute;
   right: 30px;
-  bottom: 30px
+  bottom: 10px;
+  border-radius: 5%;
 }
 
 .testimonials .owl-dots {
@@ -1082,7 +1106,7 @@ section.testimonials:after {
 }
 
 .testimonials .owl-dots .active {
-  background-color: #dc8cdb;
+  background-color: #d0aae1;
 }
 
 
@@ -1145,7 +1169,7 @@ section.contact-us .contact-info h4 {
 
 section.contact-us .contact-info span {
   font-size: 15px;
-  color: #dc8cdb;
+  color: #d0aae1;
   font-weight: 700;
 }
 
@@ -1234,13 +1258,13 @@ section.contact-us ul.social-icons li a {
   text-align: center;
   line-height: 44px;
   background-color: #fff;
-  color: #dc8cdb;
+  color: #d0aae1;
   border-radius: 50%;
   transition: all .5s;
 }
 
 section.contact-us ul.social-icons li a:hover {
-  background-color: #dc8cdb;
+  background-color: #d0aae1;
   color: #fff;
 }
 
@@ -1401,13 +1425,13 @@ section.our-team .naccs .menu div h4 {
 section.our-team .naccs .menu div span {
   font-size: 12px;
   text-transform: uppercase;
-  color: #dc8cdb;
+  color: #d0aae1;
   font-weight: 700;
   display: block;
 }
 
 section.our-team .naccs .menu div.active h4 {
-  color: #dc8cdb;
+  color: #d0aae1;
 }
 
 section.our-team ul.nacc {
@@ -1473,7 +1497,7 @@ section.our-team ul.nacc li .left-content span a {
 }
 
 section.our-team ul.nacc li .left-content span a:hover {
-  color: #dc8cdb;
+  color: #d0aae1;
 }
 
 section.our-team ul.nacc li .left-content .last-span a {
@@ -1699,7 +1723,7 @@ section.more-info .count-area-content .count-digit {
   height: 80px;
   line-height: 80px;
   font-size: 28px;
-  color: #dc8cdb;
+  color: #d0aae1;
   font-weight: 900;
   margin-bottom: -40px;
   position: relative;
@@ -1897,7 +1921,7 @@ body {
     margin: 0px 5px;
   }
   section.our-team .naccs .menu div.active img {
-    border: 3px solid #dc8cdb;
+    border: 3px solid #d0aae1;
   }
   section.our-team .naccs .menu div h4,
   section.our-team .naccs .menu div span {
