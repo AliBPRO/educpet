@@ -10,6 +10,7 @@ def index(request):
 	return render(request, template, context)
 
 def send_information_email(request):
+	print(request)
 	sujet = "Demande site : " + request.POST.get('name')
 	email_client = request.POST.get('email')
 	message = request.POST.get('message') + "\n\nEmail du client : " + email_client
