@@ -16,6 +16,9 @@ def send_information_email(request):
 	message = request.POST.get('message') + "\n\nEmail du client : " + email_client
 	
 	email = EmailMessage(sujet, message, to=['educpet@gmail.com'])
+	print(email)
+	print(email.send())
 	email.send()
+	print(email)
 
 	return JsonResponse({})
