@@ -21,4 +21,4 @@ def send_information_email(request):
 	email.send()
 	print(email)
 
-	return JsonResponse({})
+	return JsonResponse({},status=200)
