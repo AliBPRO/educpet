@@ -6,16 +6,16 @@
 
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="description" content="">
-		<meta name="author" content="">
+		<meta name="description" content="Educatrice canine avec méthodes positives. L’éducation canine est l’activité qui consiste à apprendre ou réapprendre les règles de conduite à un chien dans la vie quotidienne. Avec Educ’Pet, vous êtes certains d’avoir un apprentissage positif, sans méthode coercitive (collier électrique, collier étrangleur, coups, menaces, etc) pour le chien.">
+		<meta name="robots" content="index, follow, max-image-preview-large, max-snippet:-1, max-video-preview:1">
+
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-		<title>Educ'Pet</title>
-
+		<title>Educ'Pet - Educatrice canine avec méthodes positives</title>
 		<!-- Bootstrap core CSS -->
 		<link href="{% static 'educpet_app/css/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
 
-    	<!-- Additional CSS Files -->
+		<!-- Additional CSS Files -->
 		<link rel="stylesheet" href="{% static 'educpet_app/css/template/fontawesome.css' %}">
 		<link rel="stylesheet" href="{% static 'educpet_app/css/template/templatemo-eduwell-style.css' %}">
 		<link rel="stylesheet" href="{% static 'educpet_app/css/template/owl.css' %}">
@@ -43,8 +43,8 @@
 							<!-- ***** Logo End ***** -->
 							<!-- ***** Menu Start ***** -->
 							<ul class="nav">
-									<li class="scroll-to-section"><a href="#top" class="active">Accueil</a></li>
-									<li class="scroll-to-section"><a href="#services">Présentation</a></li>
+									<li><a href="#top" class="active">Accueil</a></li>
+									<li><a href="#presentation">Présentation</a></li>
 									<li class="has-sub">
 										<a href="javascript:void(0)">Services</a>
 										<ul class="sub-menu">
@@ -54,9 +54,9 @@
 												<li><a href="#courses">Conseils</a></li>
 										</ul>
 									</li>
-									<li class="scroll-to-section"><a href="#get-info">Qui sommes-nous ?</a></li> 
-									<li class="scroll-to-section"><a href="#testimonials">Exemples</a></li> 
-									<li class="scroll-to-section"><a href="#contact-section">Prise de contact</a></li> 
+									<li><a href="#get-info">Qui sommes-nous ?</a></li> 
+									<li><a href="#testimonials">Exemples</a></li> 
+									<li><a href="#contact-section">Prise de contact</a></li> 
 							</ul>        
 							<a class='menu-trigger'>
 								<span>Menu</span>
@@ -77,19 +77,50 @@
 					<div class="header-text">
 						<h2>Educatrice canine avec <em>méthodes positives</em></h2>
 						<div class="main-button-gradient">
-							<div class="scroll-to-section"><a href="#contact-section">Me contacter !</a></div>
+							<a href="#contact">Me contacter !</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-6">
 					<div class="right-image">
-						<img src="{% static 'educpet_app/images/chiens/logo.png' %}" alt="">
+						<img src="{% static 'educpet_app/images/chiens/logo.png' %}" alt="Educ'Pet Logo - Sans ecriture">
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- ***** Main Banner Area End ***** -->
+	<section class="our-office" id="presentation">
+		<div class="container">
+			<div class="row">				
+				<div class="col-lg-8" style="z-index:3">
+					<div id="video">
+						<div class="thumb">
+							<video controls class="video-demo" autoplay loop muted>
+
+								<source src="{% static 'educpet_app/images/chiens/prez.mp4'%}"
+										type="video/mp4">
+								<p>Votre navigateur ne prend pas en charge les vidéos HTML5.
+									Voici <a href="{% static 'educpet_app/images/chiens/prez.mp4'%}">un lien pour télécharger la vidéo</a>.</p>
+							</video>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="left-info">
+						<div class="section-heading">
+							<h4>L'éducation <em>canine</em></h4>
+						</div>
+						<p class="text-justify">
+							L’éducation canine est l’activité qui consiste à apprendre ou réapprendre les règles de conduite à un chien dans la vie quotidienne.
+							<br><br>Avec Educ’Pet, vous êtes certains d’avoir un apprentissage positif, sans méthode coercitive (collier électrique, collier étrangleur, coups, menaces, etc) pour le chien.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<section class="our-courses mt-4" id="courses">
 		<div class="container">
@@ -97,7 +128,7 @@
 				<div class="col-lg-6 offset-lg-3">
 					<div class="section-heading">
 						<h4>Mes <em>services</em></h4>
-						<p>Les differents services que nous pouvons proposez à vous et à votre meilleur ami à poil</p>
+						<p>Les differents services que nous pouvons proposer à vous et à votre meilleur ami à poil</p>
 					</div>
 				</div>
 				<div class="col-lg-12" style="z-index: 3;">
@@ -117,7 +148,7 @@
 										<li id="1er-rdv" class="active">
 											<div>
 												<div class="left-image">
-													<img src="{% static 'educpet_app/images/chiens/1er_rdv.png' %}" alt="">
+													<img src="{% static 'educpet_app/images/chiens/1er_rdv.png' %}" alt="1er rendez-vous - Image">
 													<div class="price"><h6>35€</h6></div>
 												</div>
 												<div class="right-content">
@@ -139,7 +170,7 @@
 										<li id="seance">
 											<div>
 												<div class="left-image">
-													<img src="{% static 'educpet_app/images/chiens/seances.png' %}" alt="">
+													<img src="{% static 'educpet_app/images/chiens/seances.png' %}" alt="Séances de travail - Image">
 													<div class="price"><h6>45€</h6></div>
 												</div>
 												<div class="right-content">
@@ -160,7 +191,7 @@
 										<li id="balades">
 											<div>
 												<div class="left-image">
-													<img src="{% static 'educpet_app/images/chiens/balades.png' %}" alt="">
+													<img src="{% static 'educpet_app/images/chiens/balades.png' %}" alt="Balades éducatives - Image">
 													<div class="price"><h6>20€</h6></div>
 												</div>
 												<div class="right-content">
@@ -180,7 +211,7 @@
 										<li id="conseils">
 											<div>
 												<div class="left-image">
-													<img src="{% static 'educpet_app/images/chiens/conseils.png' %}" alt="">
+													<img src="{% static 'educpet_app/images/chiens/conseils.png' %}" alt="Conseils - Image">
 													<div class="price"><h6>250€</h6></div>
 												</div>
 												<div class="right-content">
@@ -207,12 +238,12 @@
 		</div>
 	</section>
 
-	<section class="get-info">
+	<section class="get-info" id="get-info">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6">
 				<div class="left-image">
-					<img class="img-rounded" src="{% static 'educpet_app/images/chiens/laura_prez.jpg' %}" alt="">
+					<img class="img-rounded" src="{% static 'educpet_app/images/chiens/laura_prez.jpg' %}" alt="Laura & Freya - Image">
 				</div>
 				</div>
 				<div class="col-lg-6 align-self-center">
@@ -244,14 +275,14 @@
 							</p>
 							<h4>KIARRA</h4>
 							<span>Staff X - 1 ans 1/2</span>
-							<img src="{% static 'educpet_app/images/chiens/KIARRA.png' %}" alt="">
+							<img src="{% static 'educpet_app/images/chiens/KIARRA.png' %}" alt="Kiarra - Image">
 						</div>
 						<div class="item">
 							<p class="text-justify">Les maîtres d'Oreo m'ont contacté car leur chien est réactif : il aboie sur chaque chien qu'il croise et peut se montrer agressif selon le chien en face de lui. Oreo a été attaqué deux fois par des chiens et en garde un très mauvais souvenir. On travaille les croissements chiens mâles après s'être aperçu qu'il n'y avait aucun soucis avec les femelles.</p>
 							</p>
 							<h4>OREO</h4>
 							<span>Berger Australien - 4 ans</span>
-							<img src="{% static 'educpet_app/images/chiens/OREO.png' %}" alt="">
+							<img src="{% static 'educpet_app/images/chiens/OREO.png' %}" alt="Oreo - Image">
 						</div>
 						<div class="item">
 							<p class="text-justify">
@@ -259,7 +290,7 @@
 							</p>
 							<h4>ZLATAN</h4>
 							<span>Dogue Argentin - 2 ans</span>
-							<img src="{% static 'educpet_app/images/chiens/ZLATAN.png' %}" alt="">
+							<img src="{% static 'educpet_app/images/chiens/ZLATAN.png' %}" alt="Zlatan - Image">
 						</div>
 						<div class="item">
 							<p class="text-justify">
@@ -267,7 +298,7 @@
 							</p>
 							<h4>MONOI</h4>
 							<span>Parsson Russel - 5 ans</span>
-							<img src="{% static 'educpet_app/images/chiens/PARSON.png' %}" alt="">
+							<img src="{% static 'educpet_app/images/chiens/PARSON.png' %}" alt="Parson - Image">
 						</div>
 					</div>
 				</div>
