@@ -61,6 +61,8 @@
 												<li><a href="#courses">Séances</a></li>
 												<li><a href="#courses">Balades</a></li>
 												<li><a href="#courses">Conseils</a></li>
+												<li><a href="#courses">CC Débutants</a></li>
+												<li><a href="#courses">CC Confirmés</a></li>
 										</ul>
 									</li>
 									<li><a href="#get-info">Qui sommes-nous ?</a></li> 
@@ -144,15 +146,17 @@
 					<div class="naccs">
 						<div class="tabs">
 							<div class="row">
-								<div class="col-lg-3">
-									<div class="menu">
-										<div class="active gradient-border"><span>1er Rendez-vous</span></div>
-										<div class="gradient-border"><span>Séances de travail</span></div>
-										<div class="gradient-border"><span>Balades éducatives</span></div>
-										<div class="gradient-border"><span>Conseils</span></div>
+								<div >
+									<div class="menu row justify-around">
+										<div class="active gradient-border no-width"><span>1er Rendez-vous</span></div>
+										<div class="gradient-border no-width"><span>Séances de travail</span></div>
+										<div class="gradient-border no-width"><span>Balades éducatives</span></div>
+										<div class="gradient-border no-width"><span>Conseils</span></div>
+										<div class="gradient-border no-width"><span>Cours collectif - Débutants</span></div>
+										<div class="gradient-border no-width"><span>Cours collectif - Confirmés</span></div>
 									</div>
 								</div>
-								<div class="col-lg-9">
+								<div>
 									<ul class="nacc">
 										<li id="1er-rdv" class="active">
 											<div>
@@ -236,8 +240,54 @@
 													</div>
 												</div>
 											</div>
-											</li>
-										</ul>
+										</li>
+										<li id="colectif_debutant">
+											<div>
+												<div class="left-image">
+													<img src="{% static 'educpet_app/images/chiens/balades.png' %}" alt="Cours collectif débutant - Image">
+													<div class="price"><h6>35€</h6></div>
+												</div>
+												<div class="right-content">
+													<h4>Cours collectif pour débutants</h4>
+													<p class="text-justify">
+														Les cours collectifs pour débutant se dérouleront à Lumigny (77163) sur un terrain privé d’Educ’Pet.
+														Ils sont parfaits pour les chiots et les chiens qui ont du mal à obéir lorsqu’il y a un fort stimulus.
+														Les ordres de bases seront appris (assit, coucher, pas bouger, etc) avec stimulus important (autour d’autres chiens).
+														<br><br>Le nombre de chiens maximum est de 6, minimum de 3.
+													</p>
+													<span>Débutants</span>
+													<span>3 - 6 chiens</span>
+													<span class="last-span">35€/cours</span>
+													<div class="text-button">
+														<a href="#contact-section">S'inscrire</a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li id="colectif_confirmer">
+											<div>
+												<div class="left-image">
+													<img src="{% static 'educpet_app/images/chiens/balades.png' %}" alt="Cours collectif confirmés - Image">
+													<div class="price"><h6>25€</h6></div>
+												</div>
+												<div class="right-content">
+													<h4>Cours collectif pour confirmés</h4>
+													<p class="text-justify">
+														Les cours collectifs pour débutant se dérouleront à Lumigny (77163) sur un terrain privé d’Educ’Pet.
+														Ils sont parfaits pour les chiots et les chiens qui ont déjà une bonne base d’éducation avec stimulus.
+														Les ordres plus poussés seront appris (marche en laisse, marche au pied, rappel) avec stimulus important (autour d’autres chiens).
+														<br><br>Le nombre de chiens maximum est de 6, minimum de 3.
+													</p>
+													<span>Confirmés</span>
+													<span>3 - 6 chiens</span>
+													<span class="last-span">25€/cours</span>
+													<div class="text-button">
+														<a href="#contact-section">S'inscrire</a>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
 								</div>
 							</div>
 						</div>
@@ -259,9 +309,9 @@
 				<div class="section-heading pt-0 mb-2">
 					<h4 class="mt-0">Qui <em>sommes-nous</em> ?</h4>						
 					<p class="mt-2 text-justify">Je m’appelle Laura, j’ai 24 ans et je me suis lancée il y a quelques mois pour être éducatrice canine à mon propre compte. J’ai toujours été passionnée par les chiens, j’en ai eu deux (un labrador croisé setter irlandais et une malinoise) et me suis occupée de leur éducation de A à Z.
-									<br><br>Il me tenait à cœur d’avoir un travail où il m’était possible d’emmener Freya, ma malinoise ! Elle m’est très utile pour les chiens peureux, les chiens réactifs, travailler les croisements chiens ainsi que le rappel avec stimuli.
-									<br><br>Le bien-être du chien ainsi que celui du maître sont une priorité pour moi, c’est pour cela que je suis contre les méthodes coercitives où le chien subit des douleurs et où la confiance entre le chien et son maître est totalement brisée.
-								</p>							
+						<br><br>Il me tenait à cœur d’avoir un travail où il m’était possible d’emmener Freya, ma malinoise ! Elle m’est très utile pour les chiens peureux, les chiens réactifs, travailler les croisements chiens ainsi que le rappel avec stimuli.
+						<br><br>Le bien-être du chien ainsi que celui du maître sont une priorité pour moi, c’est pour cela que je suis contre les méthodes coercitives où le chien subit des douleurs et où la confiance entre le chien et son maître est totalement brisée.
+					</p>							
 				</div>
 				</div>
 			</div>

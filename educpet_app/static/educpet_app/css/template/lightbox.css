@@ -253,3 +253,11 @@ html.lb-disable-scrolling {
     height: 300px;
   }
 }
+
+.no-width{
+  width: auto!important;
+}
+
+.justify-around{
+  justify-content: space-around;
+}
