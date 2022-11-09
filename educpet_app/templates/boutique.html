@@ -1,0 +1,288 @@
+{% load static %} {% load filter_boutique %}
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="robots" content="index, follow, max-image-preview-large, max-snippet:-1, max-video-preview:1">
+		<meta http-equiv="X-UA-Compatible" content="IE=9;IE=10;IE=Edge,chrome=1"/>
+		<meta charset="utf-8"/>
+		<meta property="og:site_name" content="Educ'Pet">
+		<meta property="og:url" content="https://educpet.fr/">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="/static/educpet_app/images/chiens/logo.png">
+		<meta property="og:title" content="Education canine | Dresseur cannin | Dresseur pour chiens | EDUC'PET">
+		
+		<link rel="canonical" href="https://educpet.fr/"/>
+		
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<title>Educ'Pet - Educatrice canine avec méthodes positives</title>
+		<meta name="description" content="Education canine avec méthodes positives. Avec Educ’Pet, vous êtes certains d’avoir un apprentissage positif, sans méthode coercitive (collier électrique, collier étrangleur, coups, menaces, etc) pour le chien.">
+		<!-- Bootstrap core CSS -->
+		<link href="{% static 'educpet_app/css/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
+
+		<!-- Additional CSS Files -->
+		<link rel="stylesheet" href="{% static 'educpet_app/css/template/fontawesome.css' %}">
+		<link rel="stylesheet" href="{% static 'educpet_app/css/template/templatemo-eduwell-style.css' %}">
+		<link rel="stylesheet" href="{% static 'educpet_app/css/template/owl.css' %}">
+		<link rel="stylesheet" href="{% static 'educpet_app/css/template/lightbox.css' %}">
+
+		<link rel="icon" href="{% static 'educpet_app/images/chiens/logo_white.png' %}" />
+
+		{% block link %}
+		{% endblock %}
+
+	</head>
+
+<body>
+
+	<!-- ***** Header Area Start ***** -->
+	<header class="header-area header-sticky">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<nav class="main-nav">
+						<!-- ***** Logo Start ***** -->
+						<a href="index.html" class="logo" style="width:200px" >
+							<img src="{% static 'educpet_app/images/chiens/lolo_ecrit.png' %}" alt="Edu'Pet Logo">
+						</a>
+						<!-- ***** Logo End ***** -->
+						<!-- ***** Menu Start ***** -->
+						<ul class="nav">
+							<li><a href={% url 'index' %} class="active">Accueil</a></li>
+							<li><a href={% url 'index' %}>Présentation</a></li>
+							<li><a href="#testimonials">Boutique</a></li> 
+							<li class="has-sub">
+								<a href="javascript:void(0)">Services</a>
+								<ul class="sub-menu">
+									<li><a href={% url 'index' %}>1er RDV</a></li>
+									<li><a href={% url 'index' %}>Séances</a></li>
+									<li><a href={% url 'index' %}>Balades</a></li>
+									<li><a href={% url 'index' %}>Conseils</a></li>
+									<li><a href={% url 'index' %}>CC Débutants</a></li>
+									<li><a href={% url 'index' %}>CC Confirmés</a></li>
+								</ul>
+							</li>
+							<li><a href={% url 'index' %}>Qui sommes-nous ?</a></li> 
+							<li><a href={% url 'index' %}>Exemples</a></li> 
+							<li><a href={% url 'index' %}>Prise de contact</a></li> 
+						</ul>        
+						<a class='menu-trigger'>
+							<span>Menu</span>
+						</a>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- ***** Header Area End ***** -->
+
+	<section class="page-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="header-text">
+            <h4>Des produits approuvés par nos clients</h4>
+            <h1>Boutique</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+	<section class="product mt-4">
+		{% for category in list_categorie %}
+			{% if category.get_article|length != 0 %}
+			<div class="container mb-5">			
+				<div class="row">
+						<div class="col-lg-12">
+							<div class="header-text">
+								<h4>{{category}}</h4>
+							</div>
+						</div>
+				</div>
+				<div class="row product__filter mt-4 ">
+					{% for product in category.get_article %}						
+						<div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix">
+							<div class="card mb-0">
+								<div class="product__item">
+									<div class="product__item__pic set-bg" style="background-image: url({{product.image.url}});background-size: cover;">									
+										{% if category.date8creation|is_younger_than_ten_days %}<span class="label">Nouveauté</span>{% endif %}
+									</div>
+									<p class="product__description">{{product.description}}</p>								
+								</div>
+								<div class="product__item__text mb-2">
+									<h6 class="mb-2">{{product.nom}}</h6>									
+									<h5 class="text-gradient">{{product.prix}}€ TTC <span class="span_unite">{{product.unite}}</span></h5> 
+								</div>
+								{% comment %} <div class="my-3" style="margin-left: auto; margin-right: auto;">																	
+									<button type="button" class="btn add-to-cart">Ajouter au pannier</button>
+								</div> {% endcomment %}
+							</div>
+						</div>
+					{% endfor %}
+				</div>			
+			</div>
+			{% endif %}		
+		{% endfor %}
+	</section>
+
+	<section class="contact-us" id="contact-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8" style="z-index: 3;">
+					<div id="map">					
+						<!-- You just need to go to Google Maps for your own map point, and copy the embed code from Share -> Embed a map section -->
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2641.6562332659887!2d2.6582692999999997!3d48.5398194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5fa63644f411b%3A0xaf1e1e19b428c3d1!2s15%20Pass.%20Louis%20Armstrong%2C%2077000%20Melun!5e0!3m2!1sfr!2sfr!4v1653578350785!5m2!1sfr!2sfr" width="100%" height="420px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="border:0; border-radius: 15px; position: relative; z-index: 2;" allowfullscreen=""></iframe>
+						<div class="row">
+							<div class="col-lg-4">
+							</div>
+							<div class="col-lg-4">
+								<div class="contact-info">
+									<div class="icon">
+										<i class="fa fa-at"></i>
+									</div>
+									<h4>Email</h4>
+									<span>educpet@gmail.com</span>
+								</div>
+							</div>
+							<div class="col-lg-4">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<form id="contact" action="" method="post"> {% csrf_token %}
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="section-heading">
+									<h4>Contactez <em>nous</em></h4>
+									<p class="text-justify">Vous avez besoin d'un renseignement ou souhaitez prendre contact pour un premier rendez-vous ?<br><br>
+										Vous pouvez me joindre via ce formulaire ou via email directement</p>
+								</div>
+							</div>
+							<div class="col-lg-12">
+								<fieldset>
+									<input type="name" name="name" id="name" placeholder="Nom complet" autocomplete="on" required>
+								</fieldset>
+							</div>
+							<div class="col-lg-12">
+								<fieldset>
+									<input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Votre email" required="">
+								</fieldset>
+							</div>
+							<div class="col-lg-12">
+								<fieldset>
+									<textarea name="message" id="message" placeholder="Votre message"></textarea>
+								</fieldset>
+							</div>
+							<div class="col-lg-12">
+								<fieldset>
+									<button type="submit" id="form-submit" class="main-gradient-button">Envoyer</button>
+								</fieldset>
+							</div>
+						</div>
+					</form>
+				</div>
+				{% include 'annexe/footer.html' %}
+			</div>
+		</div>
+	</section>
+
+	<!-- Scripts -->
+	<!-- Bootstrap core JavaScript -->
+	<script src="{% static 'educpet_app/js/jquery/jquery.min.js' %}"></script>
+	<script src="{% static 'educpet_app/js/bootstrap/bootstrap.min.js' %}"></script>
+	<script src="{% static 'educpet_app/js/template/isotope.min.js' %}"></script>
+	<script src="{% static 'educpet_app/js/template/owl-carousel.js' %}"></script>
+	<script src="{% static 'educpet_app/js/template/lightbox.js' %}"></script>
+	<script src="{% static 'educpet_app/js/template/tabs.js' %}"></script>
+	<script src="{% static 'educpet_app/js/template/video.js' %}"></script>
+	<script src="{% static 'educpet_app/js/template/slick-slider.js' %}"></script>
+	<script src="{% static 'educpet_app/js/template/custom.js' %}"></script>
+	<script src="{% static 'educpet_app/js/template/swal.min.js' %}"></script>
+	<script>
+		$('.nav li:first').addClass('active');
+
+		var showSection = function showSection(section, isAnimate) {
+			var
+			direction = section.replace(/#/, ''),
+			reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+			reqSectionPos = reqSection.offset().top - 0;
+
+			if (isAnimate) {
+				$('body, html').animate({
+					scrollTop: reqSectionPos },
+				800);
+			} else {
+				$('body, html').scrollTop(reqSectionPos);
+			}
+
+		};
+
+		var checkSection = function checkSection() {
+			$('.section').each(function () {
+				var
+				$this = $(this),
+				topEdge = $this.offset().top - 80,
+				bottomEdge = topEdge + $this.height(),
+				wScroll = $(window).scrollTop();
+				if (topEdge < wScroll && bottomEdge > wScroll) {
+					var
+					currentId = $this.data('section'),
+					reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+					reqLink.closest('li').addClass('active').
+					siblings().removeClass('active');
+				}
+			});
+		};
+
+		$('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+			e.preventDefault();
+			showSection($(this).attr('href'), true);
+		});
+
+		$(window).scroll(function () {
+			checkSection();
+		});
+
+		function swalInfos(title, text, type){
+			Swal.fire({
+				title: title,
+				text: text,
+				type: type,
+				icon: type,
+				showConfirmButton:false,
+				timer: 750                
+			})
+		} 
+		
+		$("#contact").submit(function(e) {
+			e.preventDefault();
+			var form = $('#contact').serialize();
+			$.ajax({
+				url : '/send_information_email/',
+				method : 'POST',
+				headers: { "X-CSRFToken": $('input[name=csrfmiddlewaretoken]').val() },
+				data : form,
+				beforeSend: function(){
+					$('#form-submit').prop('disabled', true);
+				},
+				success : function(json){
+					swalInfos('Succes', 'Votre email a bien été envoyé','success');
+					$('#contact').trigger("reset");
+					$('#form-submit').prop('disabled', false);			
+				},
+				error : function (err){
+					swalInfos('Échec', "Votre email n'a pas été envoyé",'error');
+				}
+			})
+		});
+			
+	</script>
+</body>
+
+</html>
