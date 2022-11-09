@@ -110,7 +110,7 @@
 							<div class="card mb-0">
 								<div class="product__item">
 									<div class="product__item__pic set-bg" style="background-image: url({{product.image.url}});background-size: cover;">									
-										{% if category.date8creation|is_younger_than_ten_days %}<span class="label">Nouveauté</span>{% endif %}
+										{% if product.date_creation|is_younger_than_ten_days %}<span class="label">Nouveauté</span>{% endif %}
 									</div>
 									<p class="product__description">{{product.description}}</p>								
 								</div>
